@@ -1,0 +1,39 @@
+﻿{
+"name": "helloworld",
+"description": "Far Manager 3 plugin example",
+"license": "public domain",
+
+"dependencies": {
+    "far3api": ">=3.0.4028"
+},
+
+"targetPath": "../bin/HelloWorld",
+"targetType": "dynamicLibrary",
+
+"sourceFiles": [
+    "../dllmain.d",
+    "source/HelloWorld.d",
+],
+
+"copyFiles": [
+    "HelloWorld_en.hlf",
+    "HelloWorld_en.lng",
+    "HelloWorld_ru.hlf",
+    "HelloWorld_ru.lng",
+],
+
+"configurations": [
+  {
+    "name": "x86",
+    "platforms": ["x86"],
+    "targetName": "HelloWorld-x86",
+    "sourceFiles": ["source/HelloWorld-x86.def"],
+  },
+  {
+    "name": "x86_64",
+    "platforms": ["x86_64"],
+    "targetName": "HelloWorld-x86_64",
+  },
+]
+
+}

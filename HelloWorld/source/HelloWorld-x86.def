@@ -1,0 +1,7 @@
+EXETYPE NT
+SUBSYSTEM WINDOWS
+EXPORTS
+   GetPluginInfoW=_GetPluginInfoW@4
+   OpenW=_OpenW@4
+   SetStartupInfoW=_SetStartupInfoW@4
+   GetGlobalInfoW=_GetGlobalInfoW@4
