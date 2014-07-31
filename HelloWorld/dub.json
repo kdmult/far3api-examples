@@ -27,12 +27,13 @@
     "name": "x86",
     "platforms": ["x86"],
     "targetName": "HelloWorld-x86",
-    "sourceFiles": ["source/HelloWorld-x86.def"],
+    "sourceFiles-dmd": ["source/HelloWorld-x86.def"],
   },
   {
     "name": "x86_64",
     "platforms": ["x86_64"],
     "targetName": "HelloWorld-x86_64",
+    "dflags-dmd": ["-L/DLL"],
   },
 ]
 
