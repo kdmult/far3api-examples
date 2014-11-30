@@ -7,8 +7,6 @@ import wcharutil;
 
 import core.cpuid;
 import std.string;
-import std.stdint;
-import std.utf;
 
 GUID MainGuid = { 0xc2731ba7, 0x5714, 0x4d00, [ 0xad, 0xb8, 0xb4, 0x9c, 0x75, 0x7e, 0x86, 0xe1 ] };
 GUID MenuGuid = { 0x2caea29a, 0xf9d9, 0x4be8, [ 0x87, 0x71, 0xbb, 0x43, 0xba, 0x97, 0xa0, 0x59 ] };
@@ -66,11 +64,6 @@ void GetPluginInfoW(PluginInfo* info)
     info.PluginMenu.Guids = &MenuGuid;
     info.PluginMenu.Strings = &PluginMenuStrings[0];
     info.PluginMenu.Count = PluginMenuStrings.length;
-}
-
-const(wchar)* toWStringz(string s)
-{
-    return s is null ? null : toUTF16z(s);
 }
 
 auto GetCPUDetails()
