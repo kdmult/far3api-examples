@@ -1,38 +1,36 @@
 ﻿{
-"name": "helloworld",
-"description": "Far Manager 3 plugin example",
+"name": "dialogbuilder",
+"description": "Far Manager 3 Dialog Builder plugin example",
 "license": "public domain",
 
 "dependencies": {
     "far3api": ">=3.0.4201"
 },
 
-"targetPath": "../bin/HelloWorld",
+"targetPath": "../bin/DialogBuilder",
 "targetType": "dynamicLibrary",
 
 "sourceFiles": [
     "../dllmain.d",
-    "source/HelloWorld.d",
+    "source/DialogBuilder.d",
 ],
 
 "copyFiles": [
-    "HelloWorld_en.hlf",
-    "HelloWorld_en.lng",
-    "HelloWorld_ru.hlf",
-    "HelloWorld_ru.lng",
+    "DialogBuilder_en.lng",
+    "DialogBuilder_ru.lng",
 ],
 
 "configurations": [
   {
     "name": "x86",
     "platforms": ["x86"],
-    "targetName": "HelloWorld-x86",
-    "sourceFiles-dmd": ["source/HelloWorld-x86.def"],
+    "targetName": "DialogBuilder-x86",
+    "sourceFiles-dmd": ["source/DialogBuilder-x86.def"],
   },
   {
     "name": "x86_64",
     "platforms": ["x86_64"],
-    "targetName": "HelloWorld-x86_64",
+    "targetName": "DialogBuilder-x86_64",
     "dflags-dmd": ["-L/DLL"],
   },
 ]

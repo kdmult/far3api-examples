@@ -1,0 +1,8 @@
+LIBRARY
+EXETYPE NT
+SUBSYSTEM WINDOWS
+EXPORTS
+   GetPluginInfoW
+   OpenW
+   SetStartupInfoW
+   GetGlobalInfoW
