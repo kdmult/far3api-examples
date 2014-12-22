@@ -83,18 +83,18 @@ auto GetCPUDetails()
     if (hyperThreading) features ~= "HTT";
 
 	return [
-        "%s: %s".format(GetMsg(MVendor).toWString.rightJustify(16), vendor).toWStringz,
-        "%s: %s".format(GetMsg(MProcessor).toWString.rightJustify(16), processor).toWStringz,
-        "%s: Family=%d Model=%d Stepping=%d".format(GetMsg(MSignature).toWString.rightJustify(16), family, model, stepping).toWStringz,
-        "%s: %s".format(GetMsg(MFeatures).toWString.rightJustify(16), features).toWStringz,
-        "%s: %d threads / %d cores".format(GetMsg(MMultithreading).toWString.rightJustify(16), threadsPerCPU, coresPerCPU).toWStringz
+        "%16s: %s".format(GetMsg(MVendor).toWString, vendor).toWStringz,
+        "%16s: %s".format(GetMsg(MProcessor).toWString, processor).toWStringz,
+        "%16s: Family=%d Model=%d Stepping=%d".format(GetMsg(MSignature).toWString, family, model, stepping).toWStringz,
+        "%16s: %s".format(GetMsg(MFeatures).toWString, features).toWStringz,
+        "%16s: %d threads / %d cores".format(GetMsg(MMultithreading).toWString, threadsPerCPU, coresPerCPU).toWStringz
     ];
 }
 
 export extern (Windows)
 HANDLE OpenW(OpenInfo *info)
 {
-	const(wchar)*[] MsgItems;
+    const(wchar)*[] MsgItems;
     MsgItems ~= GetMsg(MTitle);
     MsgItems ~= GetCPUDetails();
     MsgItems ~= "\x01"w.dup.ptr; // separator line

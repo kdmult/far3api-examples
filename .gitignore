@@ -8,3 +8,4 @@ Release
 *.lib
 *.obj
 *.suo
+*.lst

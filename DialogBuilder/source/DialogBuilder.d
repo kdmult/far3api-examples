@@ -132,6 +132,7 @@ HANDLE OpenW(OpenInfo* info)
     dlg.ColumnBreak();
     uint uintEdit = settings.Get(0, "uintEdit", 2);
     auto uintEditItem = dlg.AddUIntEditField(&uintEdit, 3);
+    dlg.AddTextBefore(uintEditItem, MTextBefore);
     dlg.AddTextAfter(uintEditItem, MTextAfter);
     dlg.EndColumns();
     
