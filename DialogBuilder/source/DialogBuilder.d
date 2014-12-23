@@ -109,7 +109,7 @@ HANDLE OpenW(OpenInfo* info)
     dlg.AddButtonAfter(checkboxItem, MButtonAfter);
 
     int radioButton = settings.Get(0, "radioButton", 1);
-    dlg.AddRadioButtons(&radioButton, 2, [MRadioButton1, MRadioButton2]);
+    dlg.AddRadioButtons(&radioButton, [MRadioButton1, MRadioButton2]);
 
     dlg.StartSingleBox(MTwoColumns);
     dlg.StartColumns();
@@ -121,7 +121,7 @@ HANDLE OpenW(OpenInfo* info)
     dlg.EndColumns();
     dlg.EndSingleBox();
 
-    dlg.AddButtons(4, [MLeft, MTop, MRight, MBottom], -1);
+    dlg.AddButtons([MLeft, MTop, MRight, MBottom], -1);
 
     dlg.AddSeparator();
 
@@ -151,10 +151,10 @@ HANDLE OpenW(OpenInfo* info)
 
     int comboBox = settings.Get(0, "comboBox", 1);
     wchar[40] comboBoxText = "";
-    dlg.AddComboBox(&comboBox, comboBoxText.ptr, 20, [MComboBox1, MComboBox2, MComboBox3], 3, DIF_NONE);
+    dlg.AddComboBox(&comboBox, comboBoxText.ptr, 20, [MComboBox1, MComboBox2, MComboBox3], DIF_NONE);
 
     int listBox = settings.Get(0, "listBox", 2);
-    dlg.AddListBox(&listBox, 20, 3, [MListBox1, MListBox2, MListBox3, MListBox4], 4, DIF_NONE);
+    dlg.AddListBox(&listBox, 20, 3, [MListBox1, MListBox2, MListBox3, MListBox4], DIF_NONE);
 
     dlg.AddOKCancel(MOk, MCancel);
 
