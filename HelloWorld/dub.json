@@ -4,7 +4,7 @@
 "license": "public domain",
 
 "dependencies": {
-    "far3api": ">=3.0.4201"
+    "far3api": ">=3.0.4242"
 },
 
 "targetPath": "../bin/HelloWorld",
